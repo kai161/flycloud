@@ -1,0 +1,6 @@
+com/nk/cloud/eureka/consume/Controller/FeignConsumeController.class
+com/nk/cloud/eureka/consume/Feign/OrderFeignService.class
+com/nk/cloud/eureka/consume/CloudEurekaConsume.class
+com/nk/cloud/eureka/consume/Feign/OrderFeignFallback.class
+com/nk/cloud/eureka/consume/Controller/ConsumeController.class
+com/nk/cloud/eureka/consume/Feign/OrderFeignFallback$1.class

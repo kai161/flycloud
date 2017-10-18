@@ -1,0 +1,5 @@
+/Users/kai/work/code/my/flycloud/cloud-eureka-consume/src/main/java/com/nk/cloud/eureka/consume/Controller/FeignConsumeController.java
+/Users/kai/work/code/my/flycloud/cloud-eureka-consume/src/main/java/com/nk/cloud/eureka/consume/CloudEurekaConsume.java
+/Users/kai/work/code/my/flycloud/cloud-eureka-consume/src/main/java/com/nk/cloud/eureka/consume/Controller/ConsumeController.java
+/Users/kai/work/code/my/flycloud/cloud-eureka-consume/src/main/java/com/nk/cloud/eureka/consume/Feign/OrderFeignFallback.java
+/Users/kai/work/code/my/flycloud/cloud-eureka-consume/src/main/java/com/nk/cloud/eureka/consume/Feign/OrderFeignService.java
