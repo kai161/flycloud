@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: CloudZuul
+server:
+  port: 8081
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    eureka-server-connect-timeout-seconds: 10
+zuul:
+  routes:
+  #添加一个map信息，所有 /user/** 的请求都转发为 https://www.baidu.com/**
+#    test:
+#      path: /user/**
+#      url:  http://localhost:8001/
+    eureka:
+      path: /user/**
+      serviceId: cloudConsumeClient
+
+

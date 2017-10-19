@@ -10,6 +10,7 @@
     <module>cloud-eureka-server</module>
     <module>cloud-eureka-provider</module>
     <module>cloud-eureka-consume</module>
+      <module>cloud-zuul</module>
   </modules>
   <packaging>pom</packaging>
 
