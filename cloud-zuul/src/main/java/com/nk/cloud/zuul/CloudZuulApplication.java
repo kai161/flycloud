@@ -2,10 +2,13 @@ package com.nk.cloud.zuul;
 
 import com.netflix.zuul.filters.FilterRegistry;
 import com.nk.cloud.zuul.filter.PreRequsetFilter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
 
 
@@ -25,14 +28,25 @@ public class CloudZuulApplication {
         //添加zuul自定义过滤器
         FilterRegistry registration=FilterRegistry.instance();
         registration.put("PreRequestFilter",new PreRequsetFilter());
+
     }
 
     @Component
+    //spring boot初始化完成后会自动执行本类的run方法
     public static class MyCommandLineRunner implements CommandLineRunner {
+
+        @Value("${test.name}")
+        public String testName;
+
+        @Autowired
+        private JavaMailSender javaMailSender;
 
         @Override
         public void run(String... args) throws Exception {
             System.out.println("spring boot 启动后会执行这个方法");
+            System.out.println(testName);
+
+            System.out.println(javaMailSender.toString());
         }
     }
 }

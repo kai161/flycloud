@@ -1,6 +1,8 @@
 spring:
   application:
     name: CloudZuul
+  mail:
+    host: smtp.qq.com
 server:
   port: 8081
 eureka:
@@ -17,5 +19,6 @@ zuul:
     eureka:
       path: /user/**
       serviceId: cloudConsumeClient
-
+test:
+  name: ${PID}
 
